@@ -1,0 +1,78 @@
+let mainBox = document.querySelector(".box");
+
+let plySelectedOpt = document.querySelector(".selection");
+
+let cmpSelection = document.querySelector(".cmpSelection");
+
+let playerOptResult = document.querySelector(".plySelection");
+
+let finalResult = document.querySelector(".gameChanger");
+let cmp = document.querySelector(".computerOpt");
+let scorePly = document.querySelector(".plyScore");
+let cmpScore = document.querySelector(".cmpScore");
+
+let playerOpt = document.querySelector(".playerOpt");
+
+let data = ["Rock","Paper","Scissor"];
+
+
+
+
+
+function handleClick(event){
+  let player = (event.target.dataset.opt);
+  let cmpRandom = data [Math.floor(Math.random() * data.length)];
+ playerOptResult.innerText = player;
+ cmpSelection.innerText = cmpRandom;
+ cmp.style.color = "blue";
+ playerOpt.style.color = "black";
+  finalResult.style.padding = "10px";
+ finalResult.style.background="chocolate";
+   if(player == cmpRandom){
+    finalResult.style.background="Pink";
+      finalResult.innerText = "Oops! 😶 It's A Tie 😐"
+      cmp.style.color = "teal";
+      playerOpt.style.color = "teal";
+  }else if( player == "Rock"){
+      if(cmpRandom == "Paper"){
+        cmpScore.innerText = Number(cmpScore.innerText) + 1;
+        playerOpt.style.color = "red";
+        cmp.style.color = "green";
+          return finalResult.innerText = "Sorry! 😕 You Lose, Better Luck For Next Time 🤗";
+          
+         
+      }else{
+          scorePly.innerText = Number(scorePly.innerText) + 1;
+          playerOpt.style.color = "Green";
+          cmp.style.color = "red";
+          return finalResult.innerText = "Congo! 🎉 You Are The Winner😁"
+          
+      }
+  }else if(player == "Paper"){
+      if(cmpRandom == "Rock"){
+        scorePly.innerText = Number(scorePly.innerText) + 1;
+        playerOpt.style.color = "Green";
+        cmp.style.color = "red";
+          return finalResult.innerText = "You Won! 🎉 Congratulations 😍"
+          
+      }else{
+        cmpScore.innerText = Number(cmpScore.innerText) + 1;
+        playerOpt.style.color = "red";
+        cmp.style.color = "green";
+          return finalResult.innerText = "You Lose! 🙁 Don't Demotivate, Play Again 🤗"
+      }
+  }else if( player == "Scissor"){
+      if(cmpRandom == "Paper"){
+        scorePly.innerText = Number(scorePly.innerText) + 1;
+        playerOpt.style.color = "Green";
+        cmp.style.color = "red";
+          return finalResult.innerText = "Hip-Hip Hooray! 🎉 You Won 😀"
+      }else
+      cmpScore.innerText = Number(cmpScore.innerText) + 1;
+      playerOpt.style.color = "red";
+      cmp.style.color = "green";
+        return finalResult.innerText = "Sorry! 😔 You Lose, Try Again 🤗"
+  }
+}
+
+playerOpt.addEventListener("click",handleClick);

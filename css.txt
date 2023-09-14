@@ -1,0 +1,107 @@
+body{
+  color: chocolate;
+  background-image:url(https://d2r55xnwy6nx47.cloudfront.net/uploads/2020/03/RockPaperScissor-2880x1620_Lede.jpg);
+ background-size:cover;   
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+}
+.container{
+  background-color: burlywood;
+  max-width: 28%;
+  margin: auto;
+  opacity: 0.9;
+  border-radius: 50%;
+  border-style: double;
+  border-color: peru;
+  border-width: 10px;
+   box-shadow:  8px 8px 8px orchid, 
+           -8px -8px 8px orchid;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  text-align: center;
+}
+
+.intro{
+    font-size: 40px;
+    font-weight: 600;
+  
+    color: white;
+    margin-top: 30px;
+}
+.gameBox{
+
+    border-radius: 500px;
+    background: tan;
+    opacity: 0.7;
+    box-shadow:  20px 20px 96px yellow, 
+               -20px -20px 96px yellow;
+color: black;
+text-align: center;
+width: 500px;
+height: 500px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+margin: 20px 20px 0px 20px;
+  
+}
+.gameBox i{
+    font-size: 100px;
+   }
+
+.result{
+    margin-bottom: 30px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.result h2{
+    
+    color:white;
+    border-radius: 500px;
+    background: black;
+    box-shadow:  8px 8px 8px purple, 
+             -8px -8px 8px green;
+    padding: 10px;
+    margin-bottom: 40px;
+
+    }
+
+.selection{
+    padding-top: 20px;
+}
+
+.options{
+    display: flex;
+    justify-content: space-evenly;
+}
+.gameChanger{
+   
+    font-size: 40px;
+    color: purple ;
+    margin-top: 20px;
+    display: inline-block;
+  border-radius: 40%;
+  max-width: 500px;
+}
+
+.gameResult{
+    font-size:50px;
+}
+.computerOpt{
+    color:blue;
+}
+.playerOpt{
+    cursor: pointer;
+  color: purple;
+}
+
+
