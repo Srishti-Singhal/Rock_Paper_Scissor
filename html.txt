@@ -1,0 +1,39 @@
+<html>
+  <head>
+   <title>Rock Paper and Scissor game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title"><b><h1>Let's Play!</h1></b></h1></div>
+    <section class="box">
+        <div class="player gameBox">
+          <div class="playerSelection result">
+            <h2>Player</h2>
+            <p class="plySelection"></p>
+          </div>
+          <div class="options playerOpt">
+            <i class="far player fa-hand-rock " data-opt="Rock"></i>
+            <i class="far player fa-hand-paper " data-opt="Paper"></i>
+            <i class="far player fa-hand-scissors " data-opt="Scissor"></i>
+          </div>
+          <h3 class=" gameResult">Score:<span class="plyScore">0</span></h3>
+        </div>
+        <div class="computer gameBox">
+          <div class="computerSelection result">
+            <h2>Computer</h2>
+            <p class="cmpSelection"></p>
+          </div>
+          <div class="options computerOpt">
+            <i class="far computer fa-hand-rock"data-opt="Rock" ></i>
+            <i class="far computer fa-hand-paper"data-opt="Paper"></i>
+            <i class="far computer fa-hand-scissors"data-opt="Scissor"></i>
+          </div>
+          <h3 class="gameResult">Score:<span class="cmpScore">0</span></h3>
+        </div>
+    </section>
+    <p class="gameChanger"></p>
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/1d9bc93e09.js"></script>
+  </body>
+</html>
